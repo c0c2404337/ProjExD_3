@@ -110,7 +110,6 @@ class Beam:
         # 回転後の画像のRectを再取得
         self.rct = self.img.get_rect()
         
-        
         # ビームの中心横座標 = こうかとんの中心横座標 + こうかとんの横幅 * ビームの横速度 / 5
         self.rct.centerx = bird.rct.centerx + bird.rct.width * self.vx / 5
         
@@ -124,8 +123,7 @@ class Beam:
         """
         if check_bound(self.rct) == (True, True):
             self.rct.move_ip(self.vx, self.vy)
-            screen.blit(self.img, self.rct)    
-
+            screen.blit(self.img, self.rct)
 
 class Bomb:
     """
